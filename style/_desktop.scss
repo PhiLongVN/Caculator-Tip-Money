@@ -1,0 +1,262 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background: $bg-big;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 1rem 3rem;
+  max-width: 1200px;
+
+  .title {
+    padding: 3rem;
+    img {
+      width: 75%;
+    }
+  }
+
+  .caculator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    border-radius: 15px;
+    padding: 3rem 3.5rem;
+    background: $button;
+    gap: 3rem;
+    margin: 0 2rem;
+  }
+}
+
+.caculator {
+  .select {
+    width: 50%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+
+    .ca-bill {
+      width: 100%;
+      position: relative;
+
+      h2 {
+        color: $text;
+      }
+
+      input {
+        width: 100%;
+        padding: 1rem;
+        border: none;
+        background: $bg-big;
+        border-radius: 5px;
+      }
+
+      input:focus {
+        border: solid 2px cyan;
+      }
+
+      input::placeholder {
+        color: $bg;
+        font-weight: bold;
+        font-size: 2rem;
+        text-align: right;
+        margin-right: 0.5rem;
+      }
+
+      img {
+        position: absolute;
+        top: 53%;
+        width: 12px;
+        left: 15px;
+      }
+    }
+
+    .select-tip {
+      padding: 3rem 0;
+      h2 {
+        font-size: 1.5rem;
+        color: $text;
+      }
+
+      .menu-select {
+        width: calc(100% - 2rem);
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        gap: 1rem;
+
+        button {
+          padding: 0.6rem;
+          font-size: 1.5rem;
+          background: $bg;
+          font-weight: 900;
+          color: $text2;
+          border: none;
+          border-radius: 5px;
+          transition: all 0.3s ease;
+        }
+
+        button.active {
+          background: $bg-big;
+          color: red;
+        }
+
+        // button:hover {
+        //   background: cyan;
+        //   color: $bg;
+        // }
+
+        input {
+          color: $bg;
+          padding: 0.5rem;
+          border-radius: 5px;
+          border: none;
+          margin: 2px;
+        }
+
+        input:focus {
+          border: solid 2px cyan;
+        }
+      }
+    }
+
+    .number-people {
+      width: 100%;
+      position: relative;
+
+      span {
+        position: absolute;
+        font-size: 1.15rem;
+        color: red;
+        right: 0;
+        top: 3px;
+        opacity: 0;
+      }
+
+      &.active > span {
+        opacity: 1;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        color: $text;
+      }
+
+      input {
+        min-width: 100%;
+        padding: 1rem;
+        border-radius: 5px;
+        border: none;
+        background: $bg-big;
+      }
+
+      input::placeholder {
+        color: $bg;
+        font-size: 2rem;
+        text-align: right;
+        font-weight: 700;
+      }
+      
+      input:focus {
+        border: solid 2px cyan;
+      }
+      
+      &.active > input {
+        border: solid red 2px;
+      }
+
+      img {
+        position: absolute;
+        top: 55%;
+        left: 10px;
+      }
+    }
+  }
+}
+
+.caculator {
+  .render {
+    width: 50%;
+
+    height: 100%;
+    background: $bg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 3rem;
+    border-radius: 10px;
+
+    .tip-amount {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 3rem;
+      margin-bottom: 2rem;
+
+      p:nth-of-type(1) {
+        color: $text2;
+        font-weight: 900;
+        font-size: 1.2rem;
+
+        span {
+          color: $text;
+        }
+      }
+
+      p:nth-of-type(2) {
+        color: $bg-big;
+        font-weight: 900;
+        font-size: 4rem;
+      }
+    }
+
+    .total {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 3rem;
+
+      p:nth-of-type(1) {
+        color: $text2;
+        font-weight: 900;
+        font-size: 1.2rem;
+
+        span {
+          color: $text;
+        }
+      }
+
+      p:nth-of-type(2) {
+        color: $bg-big;
+        font-weight: 900;
+        font-size: 4rem;
+      }
+    }
+
+    .reset {
+      width: 100%;
+      padding: 1rem;
+      border-radius: 5px;
+      background: $bg-big;
+      border: none;
+      margin-top: 8rem;
+      font-weight: 900;
+      color: $bg;
+
+      &:hover {
+        background: $button;
+      }
+    }
+  }
+}

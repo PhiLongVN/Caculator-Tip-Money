@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Libre+Franklin:ital,wght@0,300;0,600;0,700;1,300;1,600;1,700&family=Outfit:wght@300;400;600&family=Rubik:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Space+Mono:ital,wght@0,400;0,700;1,700&display=swap");
+
+$bg: hsl(183, 100%, 15%);
+$text: hsl(186, 14%, 43%);
+$r: hsl(184, 14%, 56%);
+$bg-big: hsl(185, 41%, 84%);
+$button: hsl(189, 41%, 97%);
+$text2: hsl(0, 0%, 100%);
+
+html {
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+  font-size: 62.5%;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+input,
+textarea,
+select,
+button {
+  outline: none;
+}
+input {
+  line-height: normal;
+}
+label,
+button {
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+
+@import '_desktop.scss';
+@import '_mobile.scss';

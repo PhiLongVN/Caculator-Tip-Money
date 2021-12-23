@@ -1,0 +1,446 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Libre+Franklin:ital,wght@0,300;0,600;0,700;1,300;1,600;1,700&family=Outfit:wght@300;400;600&family=Rubik:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Space+Mono:ital,wght@0,400;0,700;1,700&display=swap");
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+input,
+textarea,
+select,
+button {
+  outline: none;
+}
+
+input {
+  line-height: normal;
+}
+
+label,
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  background: #c5e4e7;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 1rem 3rem;
+  max-width: 1200px;
+}
+
+.container .title {
+  padding: 3rem;
+}
+
+.container .title img {
+  width: 75%;
+}
+
+.container .caculator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-radius: 15px;
+  padding: 3rem 3.5rem;
+  background: #f4fafa;
+  gap: 3rem;
+  margin: 0 2rem;
+}
+
+.caculator .select {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.caculator .select .ca-bill {
+  width: 100%;
+  position: relative;
+}
+
+.caculator .select .ca-bill h2 {
+  color: #5e7a7d;
+}
+
+.caculator .select .ca-bill input {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  background: #c5e4e7;
+  border-radius: 5px;
+}
+
+.caculator .select .ca-bill input:focus {
+  border: solid 2px cyan;
+}
+
+.caculator .select .ca-bill input::-webkit-input-placeholder {
+  color: #00494d;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: right;
+  margin-right: 0.5rem;
+}
+
+.caculator .select .ca-bill input:-ms-input-placeholder {
+  color: #00494d;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: right;
+  margin-right: 0.5rem;
+}
+
+.caculator .select .ca-bill input::-ms-input-placeholder {
+  color: #00494d;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: right;
+  margin-right: 0.5rem;
+}
+
+.caculator .select .ca-bill input::placeholder {
+  color: #00494d;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: right;
+  margin-right: 0.5rem;
+}
+
+.caculator .select .ca-bill img {
+  position: absolute;
+  top: 53%;
+  width: 12px;
+  left: 15px;
+}
+
+.caculator .select .select-tip {
+  padding: 3rem 0;
+}
+
+.caculator .select .select-tip h2 {
+  font-size: 1.5rem;
+  color: #5e7a7d;
+}
+
+.caculator .select .select-tip .menu-select {
+  width: calc(100% - 2rem);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 33% 33% 33%;
+      grid-template-columns: 33% 33% 33%;
+  gap: 1rem;
+}
+
+.caculator .select .select-tip .menu-select button {
+  padding: 0.6rem;
+  font-size: 1.5rem;
+  background: #00494d;
+  font-weight: 900;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.caculator .select .select-tip .menu-select button.active {
+  background: #c5e4e7;
+  color: red;
+}
+
+.caculator .select .select-tip .menu-select input {
+  color: #00494d;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  margin: 2px;
+}
+
+.caculator .select .select-tip .menu-select input:focus {
+  border: solid 2px cyan;
+}
+
+.caculator .select .number-people {
+  width: 100%;
+  position: relative;
+}
+
+.caculator .select .number-people span {
+  position: absolute;
+  font-size: 1.15rem;
+  color: red;
+  right: 0;
+  top: 3px;
+  opacity: 0;
+}
+
+.caculator .select .number-people.active > span {
+  opacity: 1;
+}
+
+.caculator .select .number-people h2 {
+  font-size: 1.5rem;
+  color: #5e7a7d;
+}
+
+.caculator .select .number-people input {
+  min-width: 100%;
+  padding: 1rem;
+  border-radius: 5px;
+  border: none;
+  background: #c5e4e7;
+}
+
+.caculator .select .number-people input::-webkit-input-placeholder {
+  color: #00494d;
+  font-size: 2rem;
+  text-align: right;
+  font-weight: 700;
+}
+
+.caculator .select .number-people input:-ms-input-placeholder {
+  color: #00494d;
+  font-size: 2rem;
+  text-align: right;
+  font-weight: 700;
+}
+
+.caculator .select .number-people input::-ms-input-placeholder {
+  color: #00494d;
+  font-size: 2rem;
+  text-align: right;
+  font-weight: 700;
+}
+
+.caculator .select .number-people input::placeholder {
+  color: #00494d;
+  font-size: 2rem;
+  text-align: right;
+  font-weight: 700;
+}
+
+.caculator .select .number-people input:focus {
+  border: solid 2px cyan;
+}
+
+.caculator .select .number-people.active > input {
+  border: solid red 2px;
+}
+
+.caculator .select .number-people img {
+  position: absolute;
+  top: 55%;
+  left: 10px;
+}
+
+.caculator .render {
+  width: 50%;
+  height: 100%;
+  background: #00494d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 3rem;
+  border-radius: 10px;
+}
+
+.caculator .render .tip-amount {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+.caculator .render .tip-amount p:nth-of-type(1) {
+  color: white;
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+.caculator .render .tip-amount p:nth-of-type(1) span {
+  color: #5e7a7d;
+}
+
+.caculator .render .tip-amount p:nth-of-type(2) {
+  color: #c5e4e7;
+  font-weight: 900;
+  font-size: 4rem;
+}
+
+.caculator .render .total {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3rem;
+}
+
+.caculator .render .total p:nth-of-type(1) {
+  color: white;
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+.caculator .render .total p:nth-of-type(1) span {
+  color: #5e7a7d;
+}
+
+.caculator .render .total p:nth-of-type(2) {
+  color: #c5e4e7;
+  font-weight: 900;
+  font-size: 4rem;
+}
+
+.caculator .render .reset {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 5px;
+  background: #c5e4e7;
+  border: none;
+  margin-top: 8rem;
+  font-weight: 900;
+  color: #00494d;
+}
+
+.caculator .render .reset:hover {
+  background: #f4fafa;
+}
+
+@media screen and (max-width: 676px) {
+  .container {
+    margin: 0;
+  }
+  .container .caculator {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0;
+    padding: 3rem 0;
+    width: 100vw;
+    border-radius: 50px;
+  }
+  .caculator .select {
+    width: 80%;
+  }
+  .caculator .select .select-tip {
+    width: 100%;
+  }
+  .caculator .select .select-tip .menu-select {
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+  }
+  .caculator .render {
+    width: 80%;
+    padding: 2rem;
+  }
+  .caculator .render .tip-amount {
+    gap: 1.5rem;
+  }
+  .caculator .render .tip-amount p:nth-of-type(2) {
+    font-size: 3.5rem;
+  }
+  .caculator .render .total {
+    gap: 1.5rem;
+  }
+  .caculator .render .total p:nth-of-type(2) {
+    font-size: 3.5rem;
+  }
+}
+/*# sourceMappingURL=main.css.map */

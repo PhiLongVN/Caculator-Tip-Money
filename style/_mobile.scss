@@ -1,0 +1,42 @@
+@media screen and (max-width: 676px) {
+  .container {
+    margin: 0;
+    .caculator {
+      flex-direction: column;
+      margin: 0;
+      padding: 3rem 0;
+      width: 100vw;
+      border-radius: 50px;
+    }
+  }
+
+  .caculator {
+    .select {
+      width: 80%;
+      .select-tip {
+        width: 100%;
+        .menu-select {
+          grid-template-columns: 50% 50%;
+        }
+      }
+    }
+
+    .render {
+      width: 80%;
+      padding: 2rem;
+      .tip-amount {
+        gap: 1.5rem;
+        p:nth-of-type(2) {
+          font-size: 3.5rem;
+        }
+      }
+
+      .total {
+        gap: 1.5rem;
+        p:nth-of-type(2) {
+          font-size: 3.5rem;
+        }
+      }
+    }
+  }
+}
