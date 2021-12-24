@@ -22,11 +22,12 @@ function selectButton(e) {
     if (e.target.value == select.value) {
       select.classList.toggle("active");
       selectVL = select.value / 100;
+      caculate();
     } else {
       select.classList.remove("active");
     }
   });
-  caculate();
+
   //   console.log("selectButton -> selectVL", selectVL);
 }
 
@@ -49,7 +50,6 @@ function handlePeople(e) {
 function caculate() {
   const a = document.querySelector(".tip-amount p:nth-of-type(2)");
   const b = document.querySelector(".total p:nth-of-type(2)");
-  //   console.log("caculate -> b", b);
 
   let tip2 = (billVL / peopleVL) * selectVL;
   a.innerHTML = `$${tip2.toFixed(2)}`;
@@ -70,11 +70,12 @@ reset.onclick = () => {
 
   a.innerHTML = "$0.00";
   b.innerHTML = "$0.00";
-  bill.value = '0'
-  people.value = '0'
+  bill.value = "";
+  people.value = "";
+  custom.value = "";
 };
 
 function hadleCustom(e) {
-  customVL = (e.target.value)/100;
+  customVL = e.target.value / 100;
   caculate();
 }
